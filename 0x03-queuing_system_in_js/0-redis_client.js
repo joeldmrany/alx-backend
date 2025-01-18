@@ -1,8 +1,8 @@
-import { createClient } from 'redis';
+import redis from 'redis';
 
 async function RedisTest() {
   try {
-    const client = createClient();
+    const client = redis.createClient();
     await client.connect();
     console.log('Redis client connected to the server');
   } catch (e) {
@@ -10,4 +10,3 @@ async function RedisTest() {
   }
 }
 RedisTest();
-
